@@ -30,7 +30,7 @@ export default defineConfig({
   use: {
     baseURL: process.env.BASE_URL || 'https://hb-test.stage.sirenltd.dev',
     trace: 'on-first-retry',
-    headless: process.env.CI ? false : true,
+    headless: process.env.CI ? true : false,
     viewport: { width: 1280, height: 720 },
     screenshot: 'only-on-failure',
   },
