@@ -1,0 +1,22 @@
+{
+  "name": "vscode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "test:local": "NODE_ENV=development playwright test",
+    "test:staging": "NODE_ENV=staging playwright test",
+    "test:ci": "NODE_ENV=ci playwright test --reporter=json --reporter=html",
+    "test:env": "NODE_ENV=${ENVIRONMENT:-development} playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2",
+    "allure-playwright": "^3.4.5",
+    "dotenv": "^17.2.4"
+  }
+}
